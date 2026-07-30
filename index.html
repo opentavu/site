@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenTavu — The AI-first CRM for professional-services firms</title>
-  <meta name="description" content="OpenTavu is an AI-first CRM built on Microsoft Power Platform for professional-services SMBs — implemented and operated for you, in your own Microsoft tenant. Your data, no lock-in." />
-  <meta property="og:title" content="OpenTavu — AI-first CRM for professional-services firms" />
-  <meta property="og:description" content="Production-grade AI for your customer management — in your own Microsoft tenant, run by us." />
+  <title>OpenTavu · The AI-first CRM for professional-services firms</title>
+  <meta name="description" content="OpenTavu is an AI-first CRM built on Microsoft Power Platform for professional-services SMBs: implemented and operated for you, in your own Microsoft tenant. Your data, no lock-in." />
+  <meta property="og:title" content="OpenTavu · AI-first CRM for professional-services firms" />
+  <meta property="og:description" content="Production-grade AI for your customer management, in your own Microsoft tenant, run by us." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://opentavu.com" />
   <style>
@@ -22,7 +22,7 @@
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
     .btn { display: inline-block; padding: 13px 26px; border-radius: 10px; font-weight: 600; font-size: 15px; cursor: pointer; transition: .15s; }
     .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-primary:hover { background: var(--accent-dark); color: #fff; }
     .btn-ghost { color: var(--accent); border: 1px solid var(--line); background: #fff; }
     .btn-ghost:hover { border-color: var(--accent); }
 
@@ -33,6 +33,8 @@
     .nav-links { display: flex; gap: 22px; align-items: center; font-size: 15px; }
     .nav-links a { color: var(--muted); font-weight: 500; }
     .nav-links a:hover { color: var(--ink); }
+    .nav-links a.btn-primary { color: #fff; }
+    .nav-links a.btn-primary:hover { color: #fff; }
     .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
     .lang button { border: 0; background: #fff; color: var(--muted); font-size: 13px; font-weight: 700; padding: 6px 10px; cursor: pointer; }
     .lang button.active { background: var(--accent); color: #fff; }
@@ -74,7 +76,7 @@
     .band h2 { color: #fff; margin: 0 auto; }
     .band p { color: rgba(255,255,255,.9); margin: 14px auto 28px; max-width: 560px; font-size: 18px; }
     .band .btn-primary { background: #fff; color: var(--accent); }
-    .band .btn-primary:hover { background: #eef4fb; }
+    .band .btn-primary:hover { background: #eef4fb; color: var(--accent); }
 
     footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 14px; }
     .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; align-items: center; }
@@ -102,8 +104,8 @@
 
   <div class="hero">
     <div class="wrap">
-      <h1 data-i18n="hero.h1">The <span>AI-first CRM</span> for professional-services firms — in your Microsoft, run by us.</h1>
-      <p class="sub" data-i18n="hero.sub">OpenTavu brings production-grade AI to your customer management — case triage, client communication, proposal drafting and CRM hygiene — built on Microsoft Power Platform, implemented and operated for you. Your data stays in your own tenant. No lock-in.</p>
+      <h1 data-i18n="hero.h1">The <span>AI-first CRM</span> for professional-services firms, in your Microsoft, run by us.</h1>
+      <p class="sub" data-i18n="hero.sub">OpenTavu brings production-grade AI to your customer management: case triage, client communication, proposal drafting and CRM hygiene. Built on Microsoft Power Platform, implemented and operated for you. Your data stays in your own tenant. No lock-in.</p>
       <div class="cta">
         <a class="btn btn-primary" href="mailto:support@opentavu.com?subject=OpenTavu%20demo" data-i18n="hero.cta1">Book a demo</a>
         <a class="btn btn-ghost" href="#why" data-i18n="hero.cta2">See why it's different</a>
@@ -116,11 +118,11 @@
     <div class="wrap">
       <div class="eyebrow" data-i18n="problem.eyebrow">The gap</div>
       <h2 data-i18n="problem.h2">Small firms are stuck between CRMs that don't fit.</h2>
-      <p class="lead" data-i18n="problem.lead">Enterprise platforms are too costly and complex. Popular SaaS CRMs get expensive fast and lock your data inside their island. And "AI" is usually bolted on — a button on the side, not the engine.</p>
+      <p class="lead" data-i18n="problem.lead">Enterprise platforms are too costly and complex. Popular SaaS CRMs get expensive fast and lock your data inside their island. And "AI" is usually bolted on: a button on the side, not the engine.</p>
       <div class="grid grid-3">
         <div class="card"><div class="ic">$</div><h3 data-i18n="problem.c1t">Priced for enterprises</h3><p data-i18n="problem.c1p">Per-seat enterprise licenses and long implementations most SMBs can't justify.</p></div>
         <div class="card"><div class="ic">↯</div><h3 data-i18n="problem.c2t">Locked-in data</h3><p data-i18n="problem.c2p">Your clients and pipeline live inside a vendor's platform you can never fully leave.</p></div>
-        <div class="card"><div class="ic">AI</div><h3 data-i18n="problem.c3t">AI bolted on</h3><p data-i18n="problem.c3p">An "ask AI" button gated behind premium tiers — not intelligence woven into the workflow.</p></div>
+        <div class="card"><div class="ic">AI</div><h3 data-i18n="problem.c3t">AI bolted on</h3><p data-i18n="problem.c3p">An "ask AI" button gated behind premium tiers, not intelligence woven into the workflow.</p></div>
       </div>
     </div>
   </section>
@@ -129,10 +131,10 @@
     <div class="wrap">
       <div class="eyebrow" data-i18n="what.eyebrow">What it is</div>
       <h2 data-i18n="what.h2">An AI-first CRM accelerator, tailored to professional services.</h2>
-      <p class="lead" data-i18n="what.lead">OpenTavu is built on Microsoft Power Platform for IT consultancies, B2B agencies, and software/QA boutiques. AI is the muscle, not a sidebar — it proposes, decides with confidence thresholds, and escalates only the exceptions.</p>
+      <p class="lead" data-i18n="what.lead">OpenTavu is built on Microsoft Power Platform for IT consultancies, B2B agencies, and software/QA boutiques. AI is the muscle, not a sidebar. It proposes, decides with confidence thresholds, and escalates only the exceptions.</p>
       <div class="grid grid-3">
-        <div class="card"><div class="ic">◧</div><h3 data-i18n="what.c1t">Smart case triage</h3><p data-i18n="what.c1p">Incoming requests are categorized, prioritized and routed automatically — your small team stops sorting inboxes.</p></div>
-        <div class="card"><div class="ic">✎</div><h3 data-i18n="what.c2t">Client communication</h3><p data-i18n="what.c2p">Context-aware drafts and proposals from your real client history — a branded PDF and a ready email in one click.</p></div>
+        <div class="card"><div class="ic">◧</div><h3 data-i18n="what.c1t">Smart case triage</h3><p data-i18n="what.c1p">Incoming requests are categorized, prioritized and routed automatically, so your small team stops sorting inboxes.</p></div>
+        <div class="card"><div class="ic">✎</div><h3 data-i18n="what.c2t">Client communication</h3><p data-i18n="what.c2p">Context-aware drafts and proposals from your real client history: a branded PDF and a ready email in one click.</p></div>
         <div class="card"><div class="ic">✦</div><h3 data-i18n="what.c3t">CRM hygiene</h3><p data-i18n="what.c3p">Activity capture and lead triage keep your data clean, so the CRM you pay for actually stays trustworthy.</p></div>
       </div>
     </div>
@@ -141,15 +143,15 @@
   <section id="why">
     <div class="wrap">
       <div class="eyebrow" data-i18n="why.eyebrow">Why OpenTavu</div>
-      <h2 data-i18n="why.h2">Your data, your Microsoft tenant, a fraction of the cost — and someone runs it for you.</h2>
+      <h2 data-i18n="why.h2">Your data, your Microsoft tenant, a fraction of the cost, and someone runs it for you.</h2>
       <p class="lead" data-i18n="why.lead">It isn't a feature-by-feature clone of the big CRMs. It's a different economic model: the intelligence you want, on infrastructure you may already pay for, without the lock-in.</p>
       <div class="compare">
         <div class="row head"><div>&nbsp;</div><div class="label" data-i18n="compare.h1">Typical SaaS CRM (Professional)</div><div class="us">OpenTavu</div></div>
-        <div class="row"><div class="label" data-i18n="compare.r1l">Where it runs</div><div data-i18n="compare.r1a">The vendor's cloud (your data on their island)</div><div data-i18n="compare.r1b"><b>Your own Microsoft tenant — you own the data</b></div></div>
-        <div class="row"><div class="label" data-i18n="compare.r2l">Platform cost</div><div data-i18n="compare.r2a">Hundreds of USD/month, rising per tier</div><div data-i18n="compare.r2b"><b>A fraction — on Microsoft licensing you may already have</b></div></div>
+        <div class="row"><div class="label" data-i18n="compare.r1l">Where it runs</div><div data-i18n="compare.r1a">The vendor's cloud (your data on their island)</div><div data-i18n="compare.r1b"><b>Your own Microsoft tenant, you own the data</b></div></div>
+        <div class="row"><div class="label" data-i18n="compare.r2l">Platform cost</div><div data-i18n="compare.r2a">Hundreds of USD/month, rising per tier</div><div data-i18n="compare.r2b"><b>A fraction, on Microsoft licensing you may already have</b></div></div>
         <div class="row"><div class="label" data-i18n="compare.r3l">AI</div><div data-i18n="compare.r3a">Add-on, gated by tier</div><div data-i18n="compare.r3b"><b>Embedded across the workflow</b></div></div>
-        <div class="row"><div class="label" data-i18n="compare.r4l">Lock-in</div><div data-i18n="compare.r4a">High — hard to leave</div><div data-i18n="compare.r4b"><b>None — it lives in your Dataverse</b></div></div>
-        <div class="row"><div class="label" data-i18n="compare.r5l">Who operates it</div><div data-i18n="compare.r5a">You (or a separate partner)</div><div data-i18n="compare.r5b"><b>We do — implementation, tuning and support included</b></div></div>
+        <div class="row"><div class="label" data-i18n="compare.r4l">Lock-in</div><div data-i18n="compare.r4a">High, hard to leave</div><div data-i18n="compare.r4b"><b>None, it lives in your Dataverse</b></div></div>
+        <div class="row"><div class="label" data-i18n="compare.r5l">Who operates it</div><div data-i18n="compare.r5a">You (or a separate partner)</div><div data-i18n="compare.r5b"><b>We do: implementation, tuning and support included</b></div></div>
       </div>
     </div>
   </section>
@@ -159,7 +161,7 @@
       <div class="eyebrow" data-i18n="who.eyebrow">Who it's for</div>
       <h2 data-i18n="who.h2">Built for professional-services SMBs.</h2>
       <div class="grid grid-2">
-        <div class="card"><h3 data-i18n="who.c1t">IT consultancies &amp; software / QA boutiques</h3><p data-i18n="who.c1p">Project-based work, proposals and SOWs, client cases — where senior time is the scarcest resource.</p></div>
+        <div class="card"><h3 data-i18n="who.c1t">IT consultancies &amp; software / QA boutiques</h3><p data-i18n="who.c1p">Project-based work, proposals and SOWs, client cases, where senior time is the scarcest resource.</p></div>
         <div class="card"><h3 data-i18n="who.c2t">B2B agencies &amp; boutique advisory</h3><p data-i18n="who.c2p">Relationship-led sales, recurring clients, and a small team that can't afford CRM busywork.</p></div>
       </div>
     </div>
@@ -168,12 +170,12 @@
   <section id="model">
     <div class="wrap">
       <div class="eyebrow" data-i18n="model.eyebrow">How we work</div>
-      <h2 data-i18n="model.h2">A working AI CRM — not a project for you to maintain.</h2>
+      <h2 data-i18n="model.h2">A working AI CRM, not a project for you to maintain.</h2>
       <p class="lead" data-i18n="model.lead">We implement OpenTavu in your Microsoft tenant, connect the AI, and operate it: patches, model tuning, cost control and support. You get outcomes; we keep it running.</p>
       <div class="grid grid-3">
         <div class="card"><div class="ic">1</div><h3 data-i18n="model.c1t">Implement</h3><p data-i18n="model.c1p">Set up in your tenant, configured to your business lines, stages and SLAs.</p></div>
         <div class="card"><div class="ic">2</div><h3 data-i18n="model.c2t">Connect the AI</h3><p data-i18n="model.c2p">Turn on the AI modules, tuned to your services and rules.</p></div>
-        <div class="card"><div class="ic">3</div><h3 data-i18n="model.c3t">Operate</h3><p data-i18n="model.c3p">Ongoing support, updates and monitoring — a managed service, not a hand-off.</p></div>
+        <div class="card"><div class="ic">3</div><h3 data-i18n="model.c3t">Operate</h3><p data-i18n="model.c3p">Ongoing support, updates and monitoring: a managed service, not a hand-off.</p></div>
       </div>
     </div>
   </section>
@@ -201,74 +203,74 @@
   <script>
     var T = {
       en: {
-        "meta.title": "OpenTavu — The AI-first CRM for professional-services firms",
+        "meta.title": "OpenTavu · The AI-first CRM for professional-services firms",
         "nav.what": "What it is", "nav.why": "Why OpenTavu", "nav.who": "Who it's for", "nav.demo": "Book a demo",
-        "hero.h1": "The <span>AI-first CRM</span> for professional-services firms — in your Microsoft, run by us.",
-        "hero.sub": "OpenTavu brings production-grade AI to your customer management — case triage, client communication, proposal drafting and CRM hygiene — built on Microsoft Power Platform, implemented and operated for you. Your data stays in your own tenant. No lock-in.",
+        "hero.h1": "The <span>AI-first CRM</span> for professional-services firms, in your Microsoft, run by us.",
+        "hero.sub": "OpenTavu brings production-grade AI to your customer management: case triage, client communication, proposal drafting and CRM hygiene. Built on Microsoft Power Platform, implemented and operated for you. Your data stays in your own tenant. No lock-in.",
         "hero.cta1": "Book a demo", "hero.cta2": "See why it's different",
         "hero.note": "Runs in your Microsoft 365 / Power Platform tenant · You own your data · Managed for you",
         "problem.eyebrow": "The gap", "problem.h2": "Small firms are stuck between CRMs that don't fit.",
-        "problem.lead": "Enterprise platforms are too costly and complex. Popular SaaS CRMs get expensive fast and lock your data inside their island. And \"AI\" is usually bolted on — a button on the side, not the engine.",
+        "problem.lead": "Enterprise platforms are too costly and complex. Popular SaaS CRMs get expensive fast and lock your data inside their island. And \"AI\" is usually bolted on: a button on the side, not the engine.",
         "problem.c1t": "Priced for enterprises", "problem.c1p": "Per-seat enterprise licenses and long implementations most SMBs can't justify.",
         "problem.c2t": "Locked-in data", "problem.c2p": "Your clients and pipeline live inside a vendor's platform you can never fully leave.",
-        "problem.c3t": "AI bolted on", "problem.c3p": "An \"ask AI\" button gated behind premium tiers — not intelligence woven into the workflow.",
+        "problem.c3t": "AI bolted on", "problem.c3p": "An \"ask AI\" button gated behind premium tiers, not intelligence woven into the workflow.",
         "what.eyebrow": "What it is", "what.h2": "An AI-first CRM accelerator, tailored to professional services.",
-        "what.lead": "OpenTavu is built on Microsoft Power Platform for IT consultancies, B2B agencies, and software/QA boutiques. AI is the muscle, not a sidebar — it proposes, decides with confidence thresholds, and escalates only the exceptions.",
-        "what.c1t": "Smart case triage", "what.c1p": "Incoming requests are categorized, prioritized and routed automatically — your small team stops sorting inboxes.",
-        "what.c2t": "Client communication", "what.c2p": "Context-aware drafts and proposals from your real client history — a branded PDF and a ready email in one click.",
+        "what.lead": "OpenTavu is built on Microsoft Power Platform for IT consultancies, B2B agencies, and software/QA boutiques. AI is the muscle, not a sidebar. It proposes, decides with confidence thresholds, and escalates only the exceptions.",
+        "what.c1t": "Smart case triage", "what.c1p": "Incoming requests are categorized, prioritized and routed automatically, so your small team stops sorting inboxes.",
+        "what.c2t": "Client communication", "what.c2p": "Context-aware drafts and proposals from your real client history: a branded PDF and a ready email in one click.",
         "what.c3t": "CRM hygiene", "what.c3p": "Activity capture and lead triage keep your data clean, so the CRM you pay for actually stays trustworthy.",
-        "why.eyebrow": "Why OpenTavu", "why.h2": "Your data, your Microsoft tenant, a fraction of the cost — and someone runs it for you.",
+        "why.eyebrow": "Why OpenTavu", "why.h2": "Your data, your Microsoft tenant, a fraction of the cost, and someone runs it for you.",
         "why.lead": "It isn't a feature-by-feature clone of the big CRMs. It's a different economic model: the intelligence you want, on infrastructure you may already pay for, without the lock-in.",
         "compare.h1": "Typical SaaS CRM (Professional)",
-        "compare.r1l": "Where it runs", "compare.r1a": "The vendor's cloud (your data on their island)", "compare.r1b": "<b>Your own Microsoft tenant — you own the data</b>",
-        "compare.r2l": "Platform cost", "compare.r2a": "Hundreds of USD/month, rising per tier", "compare.r2b": "<b>A fraction — on Microsoft licensing you may already have</b>",
+        "compare.r1l": "Where it runs", "compare.r1a": "The vendor's cloud (your data on their island)", "compare.r1b": "<b>Your own Microsoft tenant, you own the data</b>",
+        "compare.r2l": "Platform cost", "compare.r2a": "Hundreds of USD/month, rising per tier", "compare.r2b": "<b>A fraction, on Microsoft licensing you may already have</b>",
         "compare.r3l": "AI", "compare.r3a": "Add-on, gated by tier", "compare.r3b": "<b>Embedded across the workflow</b>",
-        "compare.r4l": "Lock-in", "compare.r4a": "High — hard to leave", "compare.r4b": "<b>None — it lives in your Dataverse</b>",
-        "compare.r5l": "Who operates it", "compare.r5a": "You (or a separate partner)", "compare.r5b": "<b>We do — implementation, tuning and support included</b>",
+        "compare.r4l": "Lock-in", "compare.r4a": "High, hard to leave", "compare.r4b": "<b>None, it lives in your Dataverse</b>",
+        "compare.r5l": "Who operates it", "compare.r5a": "You (or a separate partner)", "compare.r5b": "<b>We do: implementation, tuning and support included</b>",
         "who.eyebrow": "Who it's for", "who.h2": "Built for professional-services SMBs.",
-        "who.c1t": "IT consultancies &amp; software / QA boutiques", "who.c1p": "Project-based work, proposals and SOWs, client cases — where senior time is the scarcest resource.",
+        "who.c1t": "IT consultancies &amp; software / QA boutiques", "who.c1p": "Project-based work, proposals and SOWs, client cases, where senior time is the scarcest resource.",
         "who.c2t": "B2B agencies &amp; boutique advisory", "who.c2p": "Relationship-led sales, recurring clients, and a small team that can't afford CRM busywork.",
-        "model.eyebrow": "How we work", "model.h2": "A working AI CRM — not a project for you to maintain.",
+        "model.eyebrow": "How we work", "model.h2": "A working AI CRM, not a project for you to maintain.",
         "model.lead": "We implement OpenTavu in your Microsoft tenant, connect the AI, and operate it: patches, model tuning, cost control and support. You get outcomes; we keep it running.",
         "model.c1t": "Implement", "model.c1p": "Set up in your tenant, configured to your business lines, stages and SLAs.",
         "model.c2t": "Connect the AI", "model.c2p": "Turn on the AI modules, tuned to your services and rules.",
-        "model.c3t": "Operate", "model.c3p": "Ongoing support, updates and monitoring — a managed service, not a hand-off.",
+        "model.c3t": "Operate", "model.c3p": "Ongoing support, updates and monitoring: a managed service, not a hand-off.",
         "band.h2": "See OpenTavu on your own pipeline.", "band.p": "A short call, a real demo, and a plan to get your firm running on an AI-first CRM.", "band.cta": "Book a demo",
         "footer.tag": "Built on Microsoft Power Platform &amp; an open framework."
       },
       es: {
-        "meta.title": "OpenTavu — El CRM AI-first para firmas de servicios profesionales",
+        "meta.title": "OpenTavu · El CRM AI-first para firmas de servicios profesionales",
         "nav.what": "Qué es", "nav.why": "Por qué OpenTavu", "nav.who": "Para quién", "nav.demo": "Agenda una demo",
-        "hero.h1": "El <span>CRM AI-first</span> para firmas de servicios profesionales — en tu Microsoft, operado por nosotros.",
-        "hero.sub": "OpenTavu lleva IA de nivel producción a tu gestión de clientes — triage de casos, comunicación con clientes, redacción de propuestas e higiene del CRM — sobre Microsoft Power Platform, implementado y operado por nosotros. Tus datos quedan en tu propio tenant. Sin lock-in.",
+        "hero.h1": "El <span>CRM AI-first</span> para firmas de servicios profesionales, en tu Microsoft, operado por nosotros.",
+        "hero.sub": "OpenTavu lleva IA de nivel producción a tu gestión de clientes: triage de casos, comunicación con clientes, redacción de propuestas e higiene del CRM. Todo sobre Microsoft Power Platform, implementado y operado por nosotros. Tus datos quedan en tu propio tenant. Sin lock-in.",
         "hero.cta1": "Agenda una demo", "hero.cta2": "Por qué es diferente",
         "hero.note": "Corre en tu tenant de Microsoft 365 / Power Platform · Tus datos son tuyos · Lo operamos por ti",
         "problem.eyebrow": "El vacío", "problem.h2": "Las firmas pequeñas están atrapadas entre CRMs que no encajan.",
-        "problem.lead": "Las plataformas enterprise son demasiado caras y complejas. Los CRM SaaS populares se encarecen rápido y encierran tus datos en su isla. Y la \"IA\" suele estar pegada por encima — un botón al lado, no el motor.",
+        "problem.lead": "Las plataformas enterprise son demasiado caras y complejas. Los CRM SaaS populares se encarecen rápido y encierran tus datos en su isla. Y la \"IA\" suele estar pegada por encima: un botón al lado, no el motor.",
         "problem.c1t": "Precios de enterprise", "problem.c1p": "Licencias por usuario e implementaciones largas que una PYME no puede justificar.",
         "problem.c2t": "Datos secuestrados", "problem.c2p": "Tus clientes y tu pipeline viven en la plataforma de un proveedor de la que nunca puedes salir del todo.",
-        "problem.c3t": "IA pegada por encima", "problem.c3p": "Un botón \"pregúntale a la IA\" detrás de planes premium — no inteligencia integrada en el flujo.",
+        "problem.c3t": "IA pegada por encima", "problem.c3p": "Un botón \"pregúntale a la IA\" detrás de planes premium, no inteligencia integrada en el flujo.",
         "what.eyebrow": "Qué es", "what.h2": "Un acelerador de CRM AI-first, a la medida de servicios profesionales.",
-        "what.lead": "OpenTavu está construido sobre Microsoft Power Platform para consultoras de TI, agencias B2B y boutiques de software/QA. La IA es el músculo, no un sidebar — propone, decide con umbrales de confianza y escala solo las excepciones.",
-        "what.c1t": "Triage inteligente de casos", "what.c1p": "Las solicitudes entrantes se categorizan, priorizan y enrutan automáticamente — tu equipo deja de clasificar bandejas.",
-        "what.c2t": "Comunicación con clientes", "what.c2p": "Borradores y propuestas con contexto de tu historial real — un PDF con tu marca y un correo listo en un clic.",
+        "what.lead": "OpenTavu está construido sobre Microsoft Power Platform para consultoras de TI, agencias B2B y boutiques de software/QA. La IA es el músculo, no un sidebar. Propone, decide con umbrales de confianza y escala solo las excepciones.",
+        "what.c1t": "Triage inteligente de casos", "what.c1p": "Las solicitudes entrantes se categorizan, priorizan y enrutan automáticamente, y tu equipo deja de clasificar bandejas.",
+        "what.c2t": "Comunicación con clientes", "what.c2p": "Borradores y propuestas con contexto de tu historial real: un PDF con tu marca y un correo listo en un clic.",
         "what.c3t": "Higiene del CRM", "what.c3p": "La captura de actividad y el triage de leads mantienen tus datos limpios, para que el CRM que pagas siga siendo confiable.",
-        "why.eyebrow": "Por qué OpenTavu", "why.h2": "Tus datos, tu tenant de Microsoft, una fracción del costo — y alguien lo opera por ti.",
+        "why.eyebrow": "Por qué OpenTavu", "why.h2": "Tus datos, tu tenant de Microsoft, una fracción del costo, y alguien lo opera por ti.",
         "why.lead": "No es un clon función-por-función de los grandes CRM. Es un modelo económico distinto: la inteligencia que quieres, sobre infraestructura que quizá ya pagas, sin lock-in.",
         "compare.h1": "CRM SaaS típico (Professional)",
-        "compare.r1l": "Dónde corre", "compare.r1a": "La nube del proveedor (tus datos en su isla)", "compare.r1b": "<b>Tu propio tenant de Microsoft — los datos son tuyos</b>",
-        "compare.r2l": "Costo de plataforma", "compare.r2a": "Cientos de USD/mes, subiendo por plan", "compare.r2b": "<b>Una fracción — sobre licencias Microsoft que quizá ya tienes</b>",
+        "compare.r1l": "Dónde corre", "compare.r1a": "La nube del proveedor (tus datos en su isla)", "compare.r1b": "<b>Tu propio tenant de Microsoft, los datos son tuyos</b>",
+        "compare.r2l": "Costo de plataforma", "compare.r2a": "Cientos de USD/mes, subiendo por plan", "compare.r2b": "<b>Una fracción, sobre licencias Microsoft que quizá ya tienes</b>",
         "compare.r3l": "IA", "compare.r3a": "Add-on, limitado por plan", "compare.r3b": "<b>Integrada en todo el flujo</b>",
-        "compare.r4l": "Lock-in", "compare.r4a": "Alto — difícil de dejar", "compare.r4b": "<b>Ninguno — vive en tu Dataverse</b>",
-        "compare.r5l": "Quién lo opera", "compare.r5a": "Tú (o un partner aparte)", "compare.r5b": "<b>Nosotros — implementación, ajuste y soporte incluidos</b>",
+        "compare.r4l": "Lock-in", "compare.r4a": "Alto, difícil de dejar", "compare.r4b": "<b>Ninguno, vive en tu Dataverse</b>",
+        "compare.r5l": "Quién lo opera", "compare.r5a": "Tú (o un partner aparte)", "compare.r5b": "<b>Nosotros: implementación, ajuste y soporte incluidos</b>",
         "who.eyebrow": "Para quién", "who.h2": "Hecho para PYMES de servicios profesionales.",
-        "who.c1t": "Consultoras de TI y boutiques de software / QA", "who.c1p": "Trabajo por proyectos, propuestas y SOWs, casos de clientes — donde el tiempo senior es el recurso más escaso.",
+        "who.c1t": "Consultoras de TI y boutiques de software / QA", "who.c1p": "Trabajo por proyectos, propuestas y SOWs, casos de clientes, donde el tiempo senior es el recurso más escaso.",
         "who.c2t": "Agencias B2B y consultoría boutique", "who.c2p": "Ventas por relaciones, clientes recurrentes y un equipo pequeño que no puede perder tiempo en tareas del CRM.",
-        "model.eyebrow": "Cómo trabajamos", "model.h2": "Un CRM con IA funcionando — no un proyecto para que mantengas.",
+        "model.eyebrow": "Cómo trabajamos", "model.h2": "Un CRM con IA funcionando, no un proyecto para que mantengas.",
         "model.lead": "Implementamos OpenTavu en tu tenant de Microsoft, conectamos la IA y la operamos: parches, ajuste de modelos, control de costos y soporte. Tú obtienes resultados; nosotros lo mantenemos andando.",
         "model.c1t": "Implementamos", "model.c1p": "Montaje en tu tenant, configurado a tus líneas de negocio, etapas y SLAs.",
         "model.c2t": "Conectamos la IA", "model.c2p": "Encendemos los módulos de IA, ajustados a tus servicios y reglas.",
-        "model.c3t": "Operamos", "model.c3p": "Soporte, actualizaciones y monitoreo continuos — servicio gestionado, no una entrega y adiós.",
+        "model.c3t": "Operamos", "model.c3p": "Soporte, actualizaciones y monitoreo continuos: servicio gestionado, no una entrega y adiós.",
         "band.h2": "Ve OpenTavu con tu propio pipeline.", "band.p": "Una llamada corta, una demo real y un plan para poner tu firma en un CRM AI-first.", "band.cta": "Agenda una demo",
         "footer.tag": "Construido sobre Microsoft Power Platform y un framework abierto."
       }
