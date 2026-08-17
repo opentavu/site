@@ -82,6 +82,19 @@
     .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; align-items: center; }
     .foot a { color: var(--muted); margin-left: 18px; }
     .foot a:hover { color: var(--accent); }
+    /* pipeline + demo */
+    .pipe { display:flex; flex-wrap:wrap; align-items:stretch; gap:10px; margin-top:38px; }
+    .pstep { flex:1 1 160px; background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 14px; }
+    .pstep.aiStep { border-color:var(--accent); box-shadow:0 8px 24px rgba(15,108,189,.14); }
+    .pstep .pn { width:26px; height:26px; border-radius:50%; background:var(--accent); color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; margin-bottom:10px; }
+    .pstep .pic { font-size:22px; margin-bottom:8px; }
+    .pstep h4 { font-size:14px; margin-bottom:5px; }
+    .pstep p { font-size:12.5px; color:var(--muted); line-height:1.4; }
+    .parrow { flex:0 0 auto; align-self:center; color:var(--accent); font-weight:700; font-size:20px; }
+    @media (max-width:820px){ .parrow{ display:none; } .pstep{ flex:1 1 100%; } }
+    .shot { margin-top:34px; border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 10px 40px rgba(15,108,189,.10); background:#fff; }
+    .shot img { display:block; width:100%; height:auto; }
+    .shot .cap { padding:14px 20px; font-size:14px; color:var(--muted); border-top:1px solid var(--line); }
   </style>
 </head>
 <body>
@@ -150,6 +163,29 @@
         <div class="card"><div class="ic">2</div><h3 data-i18n="feat.c2t">Meeting capture</h3><p data-i18n="feat.c2p">Pull a client meeting transcript from Teams and AI extracts the discovery, flags potential clients and their company, and turns it into an opportunity with contact and account in one click. It even drafts your follow-up email.</p></div>
         <div class="card"><div class="ic">3</div><h3 data-i18n="feat.c3t">Proposal email</h3><p data-i18n="feat.c3p">When you send a proposal, OpenTavu writes the client email grounded in that proposal and attaches a branded PDF, ready for you to review and send.</p></div>
         <div class="card"><div class="ic">4</div><h3 data-i18n="feat.c4t">Case categorization</h3><p data-i18n="feat.c4p">Once they are clients, every incoming case is read, categorized and routed with a confidence score. Low-confidence cases go to human review, not silently misfiled.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="soft">
+    <div class="wrap">
+      <div class="eyebrow" data-i18n="demo.eyebrow">See it in action</div>
+      <h2 data-i18n="demo.h2">Watch a lead go from a web form to your pipeline.</h2>
+      <p class="lead" data-i18n="demo.lead">A prospect asks for the guide. OpenTavu captures the lead, emails the guide, and the AI triages it before you touch anything. You only step in to approve.</p>
+      <div class="pipe">
+        <div class="pstep"><div class="pn">1</div><div class="pic">📝</div><h4 data-i18n="demo.s1t">Web form</h4><p data-i18n="demo.s1p">Name, email, company, message, language.</p></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="pn">2</div><div class="pic">⚡</div><h4 data-i18n="demo.s2t">Power Automate</h4><p data-i18n="demo.s2p">Captures the lead and emails the guide (ES/EN).</p></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="pn">3</div><div class="pic">🗂️</div><h4 data-i18n="demo.s3t">Lead created</h4><p data-i18n="demo.s3p">A tavu_lead lands in the buffer, tagged by source.</p></div>
+        <div class="parrow">→</div>
+        <div class="pstep aiStep"><div class="pn">4</div><div class="pic">🤖</div><h4 data-i18n="demo.s4t">AI triage</h4><p data-i18n="demo.s4p">Matches your CRM and recommends: promote, link, or discard.</p></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="pn">5</div><div class="pic">✅</div><h4 data-i18n="demo.s5t">You decide</h4><p data-i18n="demo.s5p">One click. New records only after you confirm.</p></div>
+      </div>
+      <div class="shot">
+        <img src="assets/lead-triage.png" alt="Lead Triage in the OpenTavu app" />
+        <div class="cap" data-i18n="demo.cap">Lead Triage in the OpenTavu app: the AI recommendation, its confidence score, and your one-click decision.</div>
       </div>
     </div>
   </section>
@@ -240,6 +276,14 @@
         "feat.c2t": "Meeting capture", "feat.c2p": "Pull a client meeting transcript from Teams and AI extracts the discovery, flags potential clients and their company, and turns it into an opportunity with contact and account in one click. It even drafts your follow-up email.",
         "feat.c3t": "Proposal email", "feat.c3p": "When you send a proposal, OpenTavu writes the client email grounded in that proposal and attaches a branded PDF, ready for you to review and send.",
         "feat.c4t": "Case categorization", "feat.c4p": "Once they are clients, every incoming case is read, categorized and routed with a confidence score. Low-confidence cases go to human review, not silently misfiled.",
+        "demo.eyebrow": "See it in action", "demo.h2": "Watch a lead go from a web form to your pipeline.",
+        "demo.lead": "A prospect asks for the guide. OpenTavu captures the lead, emails the guide, and the AI triages it before you touch anything. You only step in to approve.",
+        "demo.s1t": "Web form", "demo.s1p": "Name, email, company, message, language.",
+        "demo.s2t": "Power Automate", "demo.s2p": "Captures the lead and emails the guide (ES/EN).",
+        "demo.s3t": "Lead created", "demo.s3p": "A tavu_lead lands in the buffer, tagged by source.",
+        "demo.s4t": "AI triage", "demo.s4p": "Matches your CRM and recommends: promote, link, or discard.",
+        "demo.s5t": "You decide", "demo.s5p": "One click. New records only after you confirm.",
+        "demo.cap": "Lead Triage in the OpenTavu app: the AI recommendation, its confidence score, and your one-click decision.",
         "why.eyebrow": "Why OpenTavu", "why.h2": "Your data, your Microsoft tenant, a fraction of the cost, and someone runs it for you.",
         "why.lead": "It isn't a feature-by-feature clone of the big CRMs. It's a different economic model: the intelligence you want, on infrastructure you may already pay for, without the lock-in.",
         "compare.h1": "Typical SaaS CRM (Professional)",
@@ -283,6 +327,14 @@
         "feat.c2t": "Captura de reuniones", "feat.c2p": "Trae el transcript de una reunión desde Teams y la IA extrae el discovery, marca clientes potenciales y su empresa, y lo convierte en una oportunidad con contacto y cuenta en un clic. Incluso redacta tu correo de seguimiento.",
         "feat.c3t": "Correo de propuesta", "feat.c3p": "Cuando envías una propuesta, OpenTavu escribe el correo al cliente basado en esa propuesta y adjunta un PDF con tu marca, listo para que lo revises y envíes.",
         "feat.c4t": "Categorización de casos", "feat.c4p": "Cuando ya son clientes, cada caso entrante se lee, categoriza y enruta con un puntaje de confianza. Los de baja confianza van a revisión humana, no se archivan mal en silencio.",
+        "demo.eyebrow": "Míralo funcionando", "demo.h2": "Un lead pasa de un formulario web a tu pipeline.",
+        "demo.lead": "Un prospecto pide la guía. OpenTavu captura el lead, le envía la guía, y la IA lo triagea antes de que toques nada. Tú solo entras a aprobar.",
+        "demo.s1t": "Formulario web", "demo.s1p": "Nombre, correo, empresa, mensaje, idioma.",
+        "demo.s2t": "Power Automate", "demo.s2p": "Captura el lead y envía la guía (ES/EN).",
+        "demo.s3t": "Lead creado", "demo.s3p": "Un tavu_lead entra al buffer, etiquetado por origen.",
+        "demo.s4t": "Triage con IA", "demo.s4p": "Cruza tu CRM y recomienda: promover, vincular o descartar.",
+        "demo.s5t": "Tú decides", "demo.s5p": "Un clic. Registros nuevos solo tras tu confirmación.",
+        "demo.cap": "Lead Triage en la app de OpenTavu: la recomendación de la IA, su nivel de confianza y tu decisión en un clic.",
         "why.eyebrow": "Por qué OpenTavu", "why.h2": "Tus datos, tu tenant de Microsoft, una fracción del costo, y alguien lo opera por ti.",
         "why.lead": "No es un clon función-por-función de los grandes CRM. Es un modelo económico distinto: la inteligencia que quieres, sobre infraestructura que quizá ya pagas, sin lock-in.",
         "compare.h1": "CRM SaaS típico (Professional)",
