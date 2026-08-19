@@ -52,6 +52,8 @@
     .eyebrow { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; }
     h2 { font-size: clamp(26px, 3.5vw, 36px); letter-spacing: -.5px; margin-top: 10px; max-width: 780px; }
     .lead { color: var(--muted); font-size: 18px; margin-top: 14px; max-width: 730px; }
+    h3.stage { font-size: clamp(22px, 3vw, 28px); letter-spacing: -.3px; margin-top: 54px; }
+    h3.stage + .lead { margin-top: 8px; }
 
     .grid { display: grid; gap: 22px; margin-top: 40px; }
     .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -157,21 +159,15 @@
     <div class="wrap">
       <div class="eyebrow" data-i18n="feat.eyebrow">What the AI does</div>
       <h2 data-i18n="feat.h2">AI across your client lifecycle, from first lead to ongoing service.</h2>
-      <p class="lead" data-i18n="feat.lead">The intelligence sits where the work happens. Each step reads context, proposes and drafts; you stay the reviewer.</p>
-      <div class="grid grid-2">
-        <div class="card"><div class="ic">1</div><h3 data-i18n="feat.c1t">Lead triage</h3><p data-i18n="feat.c1p">New inbound leads are matched against your CRM and triaged (promote, link or discard) before they clutter it. You approve the ones that create new records.</p></div>
-        <div class="card"><div class="ic">2</div><h3 data-i18n="feat.c2t">Meeting capture</h3><p data-i18n="feat.c2p">Pull a client meeting transcript from Teams and AI extracts the discovery, flags potential clients and their company, and turns it into an opportunity with contact and account in one click. It even drafts your follow-up email.</p></div>
-        <div class="card"><div class="ic">3</div><h3 data-i18n="feat.c3t">Proposal email</h3><p data-i18n="feat.c3p">When you send a proposal, OpenTavu writes the client email grounded in that proposal and attaches a branded PDF, ready for you to review and send.</p></div>
-        <div class="card"><div class="ic">4</div><h3 data-i18n="feat.c4t">Case categorization</h3><p data-i18n="feat.c4p">Once they are clients, every incoming case is read, categorized and routed with a confidence score. Low-confidence cases go to human review, not silently misfiled.</p></div>
-      </div>
-    </div>
-  </section>
+      <p class="lead" data-i18n="feat.lead">Follow one prospect, Contoso, screen by screen: a lead comes in, a meeting is captured, a proposal goes out, and a support case is handled. Here is the whole cycle, then each step inside the app.</p>
 
-  <section id="demo" class="soft">
-    <div class="wrap">
-      <div class="eyebrow" data-i18n="demo.eyebrow">See it in action</div>
-      <h2 data-i18n="demo.h2">Watch a lead go from a web form to your pipeline.</h2>
-      <p class="lead" data-i18n="demo.lead">A prospect asks for the guide. OpenTavu captures the lead, emails the guide, and the AI triages it before you touch anything. You only step in to approve.</p>
+      <div class="shot" style="margin-top:36px">
+        <img src="assets/sales-cycle-band.png" alt="The full OpenTavu sales cycle, from lead to won deal to support" />
+        <div class="cap" data-i18n="feat.bandcap">The full sales cycle: one prospect from a raw lead to a won deal and into post-sale support, with every record in your own Microsoft tenant.</div>
+      </div>
+
+      <h3 class="stage" data-i18n="feat.s1h">1 · Lead triage</h3>
+      <p class="lead" data-i18n="feat.s1p">A prospect asks for the guide from a web form. Power Automate captures the lead and emails the guide, and the AI triages it before you touch anything: it matches the lead against your CRM and recommends promote, link or discard, with a confidence score. You approve the ones that create new records.</p>
       <div class="pipe">
         <div class="pstep"><div class="pn">1</div><div class="pic">📝</div><h4 data-i18n="demo.s1t">Web form</h4><p data-i18n="demo.s1p">Name, email, company, message, language.</p></div>
         <div class="parrow">→</div>
@@ -183,10 +179,19 @@
         <div class="parrow">→</div>
         <div class="pstep"><div class="pn">5</div><div class="pic">✅</div><h4 data-i18n="demo.s5t">You decide</h4><p data-i18n="demo.s5p">One click. New records only after you confirm.</p></div>
       </div>
-      <div class="shot">
-        <img src="assets/lead-triage.png" alt="Lead Triage in the OpenTavu app" />
-        <div class="cap" data-i18n="demo.cap">Lead Triage in the OpenTavu app: the AI recommendation, its confidence score, and your one-click decision.</div>
-      </div>
+      <div class="shot"><img src="assets/lead-triage.png" alt="Lead Triage in the OpenTavu app" /><div class="cap" data-i18n="demo.cap">Lead Triage in the OpenTavu app: the AI recommendation, its confidence score, and your one-click decision.</div></div>
+
+      <h3 class="stage" data-i18n="feat.s2h">2 · Meeting capture</h3>
+      <p class="lead" data-i18n="feat.s2p">After the discovery call, pull the Teams transcript. The AI writes the summary and extracts the discovery, flags the prospect and their company, and turns it into an opportunity in one click. It even drafts the follow-up email.</p>
+      <div class="shot"><img src="assets/meeting-capture.png" alt="Meeting Capture in the OpenTavu app" /><div class="cap" data-i18n="feat.shot2">Meeting Capture: from a Teams transcript the AI writes the summary, extracts the discovery (needs, budget, timeline, decision-makers, next steps), and flags the prospect. One click turns it into an opportunity, and it even drafts your follow-up email.</div></div>
+
+      <h3 class="stage" data-i18n="feat.s3h">3 · Proposal email</h3>
+      <p class="lead" data-i18n="feat.s3p">When the proposal is ready, OpenTavu writes the client email grounded in it, resolves the recipient, and attaches the branded PDF. You review and send.</p>
+      <div class="shot"><img src="assets/proposal-email.png" alt="Proposal Email in the OpenTavu app" /><div class="cap" data-i18n="feat.shot3">Proposal Email: OpenTavu drafts the client email grounded in the proposal, resolves the recipient, writes the subject and attaches the branded PDF. You just review and send.</div></div>
+
+      <h3 class="stage" data-i18n="feat.s4h">4 · Case categorization</h3>
+      <p class="lead" data-i18n="feat.s4p">Once Contoso is a client, every incoming case is read, categorized into your own business lines, and put on an SLA clock, with low-confidence cases routed to human review.</p>
+      <div class="shot"><img src="assets/case-categorization.png" alt="Case Categorization in the OpenTavu app" /><div class="cap" data-i18n="feat.shot4">Case Categorization: every case gets an AI assessment with a confidence score, is auto-sorted into your own business line → category → subcategory, and gets an SLA tracked on your business calendar.</div></div>
     </div>
   </section>
 
@@ -271,11 +276,23 @@
         "what.c2t": "Client communication", "what.c2p": "Context-aware drafts and proposals from your real client history: a branded PDF and a ready email in one click.",
         "what.c3t": "CRM hygiene", "what.c3p": "Activity capture and lead triage keep your data clean, so the CRM you pay for actually stays trustworthy.",
         "feat.eyebrow": "What the AI does", "feat.h2": "AI across your client lifecycle, from first lead to ongoing service.",
-        "feat.lead": "The intelligence sits where the work happens. Each step reads context, proposes and drafts; you stay the reviewer.",
+        "feat.lead": "Follow one prospect, Contoso, screen by screen: a lead comes in, a meeting is captured, a proposal goes out, and a support case is handled. Here is the whole cycle, then each step inside the app.",
+        "feat.bandcap": "The full sales cycle: one prospect from a raw lead to a won deal and into post-sale support, with every record in your own Microsoft tenant.",
+        "feat.s1h": "1 · Lead triage",
+        "feat.s1p": "A prospect asks for the guide from a web form. Power Automate captures the lead and emails the guide, and the AI triages it before you touch anything: it matches the lead against your CRM and recommends promote, link or discard, with a confidence score. You approve the ones that create new records.",
+        "feat.s2h": "2 · Meeting capture",
+        "feat.s2p": "After the discovery call, pull the Teams transcript. The AI writes the summary and extracts the discovery, flags the prospect and their company, and turns it into an opportunity in one click. It even drafts the follow-up email.",
+        "feat.s3h": "3 · Proposal email",
+        "feat.s3p": "When the proposal is ready, OpenTavu writes the client email grounded in it, resolves the recipient, and attaches the branded PDF. You review and send.",
+        "feat.s4h": "4 · Case categorization",
+        "feat.s4p": "Once Contoso is a client, every incoming case is read, categorized into your own business lines, and put on an SLA clock, with low-confidence cases routed to human review.",
         "feat.c1t": "Lead triage", "feat.c1p": "New inbound leads are matched against your CRM and triaged (promote, link or discard) before they clutter it. You approve the ones that create new records.",
         "feat.c2t": "Meeting capture", "feat.c2p": "Pull a client meeting transcript from Teams and AI extracts the discovery, flags potential clients and their company, and turns it into an opportunity with contact and account in one click. It even drafts your follow-up email.",
         "feat.c3t": "Proposal email", "feat.c3p": "When you send a proposal, OpenTavu writes the client email grounded in that proposal and attaches a branded PDF, ready for you to review and send.",
         "feat.c4t": "Case categorization", "feat.c4p": "Once they are clients, every incoming case is read, categorized and routed with a confidence score. Low-confidence cases go to human review, not silently misfiled.",
+        "feat.shot2": "Meeting Capture: from a Teams transcript the AI writes the summary, extracts the discovery (needs, budget, timeline, decision-makers, next steps), and flags the prospect. One click turns it into an opportunity, and it even drafts your follow-up email.",
+        "feat.shot3": "Proposal Email: OpenTavu drafts the client email grounded in the proposal, resolves the recipient, writes the subject and attaches the branded PDF. You just review and send.",
+        "feat.shot4": "Case Categorization: every case gets an AI assessment with a confidence score, is auto-sorted into your own business line → category → subcategory, and gets an SLA tracked on your business calendar.",
         "demo.eyebrow": "See it in action", "demo.h2": "Watch a lead go from a web form to your pipeline.",
         "demo.lead": "A prospect asks for the guide. OpenTavu captures the lead, emails the guide, and the AI triages it before you touch anything. You only step in to approve.",
         "demo.s1t": "Web form", "demo.s1p": "Name, email, company, message, language.",
@@ -284,6 +301,7 @@
         "demo.s4t": "AI triage", "demo.s4p": "Matches your CRM and recommends: promote, link, or discard.",
         "demo.s5t": "You decide", "demo.s5p": "One click. New records only after you confirm.",
         "demo.cap": "Lead Triage in the OpenTavu app: the AI recommendation, its confidence score, and your one-click decision.",
+        "demo.bandcap": "And it doesn't stop at the lead. The full sales cycle: one prospect from a raw lead to a won deal and into post-sale support, with every record in your own Microsoft tenant.",
         "why.eyebrow": "Why OpenTavu", "why.h2": "Your data, your Microsoft tenant, a fraction of the cost, and someone runs it for you.",
         "why.lead": "It isn't a feature-by-feature clone of the big CRMs. It's a different economic model: the intelligence you want, on infrastructure you may already pay for, without the lock-in.",
         "compare.h1": "Typical SaaS CRM (Professional)",
@@ -322,11 +340,23 @@
         "what.c2t": "Comunicación con clientes", "what.c2p": "Borradores y propuestas con contexto de tu historial real: un PDF con tu marca y un correo listo en un clic.",
         "what.c3t": "Higiene del CRM", "what.c3p": "La captura de actividad y el triage de leads mantienen tus datos limpios, para que el CRM que pagas siga siendo confiable.",
         "feat.eyebrow": "Qué hace la IA", "feat.h2": "IA a lo largo del ciclo de tu cliente, del primer lead al servicio continuo.",
-        "feat.lead": "La inteligencia va donde ocurre el trabajo. Cada paso lee el contexto, propone y redacta; tú te quedas como revisor.",
+        "feat.lead": "Sigue a un prospecto, Contoso, pantalla por pantalla: entra un lead, se captura una reunión, sale una propuesta y se atiende un caso de soporte. Aquí está el ciclo completo, y luego cada paso dentro de la app.",
+        "feat.bandcap": "El ciclo de venta completo: un prospecto desde un lead hasta un negocio ganado y el soporte post-venta, con cada registro en tu propio tenant de Microsoft.",
+        "feat.s1h": "1 · Triage de leads",
+        "feat.s1p": "Un prospecto pide la guía desde un formulario web. Power Automate captura el lead y le envía la guía, y la IA lo triagea antes de que toques nada: lo cruza con tu CRM y recomienda promover, vincular o descartar, con un puntaje de confianza. Tú apruebas los que crean registros nuevos.",
+        "feat.s2h": "2 · Captura de reuniones",
+        "feat.s2p": "Después de la llamada de descubrimiento, trae el transcript de Teams. La IA redacta el resumen y extrae el discovery, marca al prospecto y su empresa, y lo vuelve una oportunidad en un clic. Incluso redacta el correo de seguimiento.",
+        "feat.s3h": "3 · Correo de propuesta",
+        "feat.s3p": "Cuando la propuesta está lista, OpenTavu escribe el correo al cliente basado en ella, resuelve el destinatario y adjunta el PDF con tu marca. Tú revisas y envías.",
+        "feat.s4h": "4 · Categorización de casos",
+        "feat.s4p": "Cuando Contoso ya es cliente, cada caso entrante se lee, se categoriza en tus propias líneas de negocio y se pone en un reloj de SLA, con los casos de baja confianza enviados a revisión humana.",
         "feat.c1t": "Triage de leads", "feat.c1p": "Los leads entrantes se cruzan con tu CRM y se clasifican (promover, vincular o descartar) antes de ensuciarlo. Tú apruebas los que crean registros nuevos.",
         "feat.c2t": "Captura de reuniones", "feat.c2p": "Trae el transcript de una reunión desde Teams y la IA extrae el discovery, marca clientes potenciales y su empresa, y lo convierte en una oportunidad con contacto y cuenta en un clic. Incluso redacta tu correo de seguimiento.",
         "feat.c3t": "Correo de propuesta", "feat.c3p": "Cuando envías una propuesta, OpenTavu escribe el correo al cliente basado en esa propuesta y adjunta un PDF con tu marca, listo para que lo revises y envíes.",
         "feat.c4t": "Categorización de casos", "feat.c4p": "Cuando ya son clientes, cada caso entrante se lee, categoriza y enruta con un puntaje de confianza. Los de baja confianza van a revisión humana, no se archivan mal en silencio.",
+        "feat.shot2": "Captura de reuniones: desde un transcript de Teams, la IA redacta el resumen, extrae el discovery (necesidades, presupuesto, tiempos, decisores, próximos pasos) y marca al prospecto. Un clic lo vuelve una oportunidad, e incluso redacta tu correo de seguimiento.",
+        "feat.shot3": "Correo de propuesta: OpenTavu redacta el correo basado en la propuesta, resuelve el destinatario, escribe el asunto y adjunta el PDF con tu marca. Tú solo revisas y envías.",
+        "feat.shot4": "Categorización de casos: cada caso recibe una evaluación de IA con puntaje de confianza, se clasifica en tu propia línea de negocio → categoría → subcategoría, y recibe un SLA en tu calendario de negocio.",
         "demo.eyebrow": "Míralo funcionando", "demo.h2": "Un lead pasa de un formulario web a tu pipeline.",
         "demo.lead": "Un prospecto pide la guía. OpenTavu captura el lead, le envía la guía, y la IA lo triagea antes de que toques nada. Tú solo entras a aprobar.",
         "demo.s1t": "Formulario web", "demo.s1p": "Nombre, correo, empresa, mensaje, idioma.",
@@ -335,6 +365,7 @@
         "demo.s4t": "Triage con IA", "demo.s4p": "Cruza tu CRM y recomienda: promover, vincular o descartar.",
         "demo.s5t": "Tú decides", "demo.s5p": "Un clic. Registros nuevos solo tras tu confirmación.",
         "demo.cap": "Lead Triage en la app de OpenTavu: la recomendación de la IA, su nivel de confianza y tu decisión en un clic.",
+        "demo.bandcap": "Y no se detiene en el lead. El ciclo de venta completo: un prospecto desde un lead hasta un negocio ganado y el soporte post-venta, con cada registro en tu propio tenant de Microsoft.",
         "why.eyebrow": "Por qué OpenTavu", "why.h2": "Tus datos, tu tenant de Microsoft, una fracción del costo, y alguien lo opera por ti.",
         "why.lead": "No es un clon función-por-función de los grandes CRM. Es un modelo económico distinto: la inteligencia que quieres, sobre infraestructura que quizá ya pagas, sin lock-in.",
         "compare.h1": "CRM SaaS típico (Professional)",
