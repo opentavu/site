@@ -50,8 +50,8 @@
     section { padding: 72px 0; }
     section.soft { background: var(--bg-soft); }
     .eyebrow { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; }
-    h2 { font-size: clamp(26px, 3.5vw, 36px); letter-spacing: -.5px; margin-top: 10px; max-width: 780px; }
-    .lead { color: var(--muted); font-size: 18px; margin-top: 14px; max-width: 730px; }
+    h2 { font-size: clamp(26px, 3.5vw, 36px); letter-spacing: -.5px; margin-top: 10px; max-width: 940px; }
+    .lead { color: var(--muted); font-size: 18px; margin-top: 14px; max-width: 940px; }
     h3.stage { font-size: clamp(22px, 3vw, 28px); letter-spacing: -.3px; margin-top: 54px; }
     h3.stage + .lead { margin-top: 8px; }
 
@@ -167,13 +167,13 @@
       </div>
 
       <h3 class="stage" data-i18n="feat.s1h">1 · Lead triage</h3>
-      <p class="lead" data-i18n="feat.s1p">A prospect asks for the guide from a web form. Power Automate captures the lead and emails the guide, and the AI triages it before you touch anything: it matches the lead against your CRM and recommends promote, link or discard, with a confidence score. You approve the ones that create new records.</p>
+      <p class="lead" data-i18n="feat.s1p">A prospect asks for information from a web form. Power Automate captures the lead and sends an automatic reply, and the AI triages it before you touch anything: it matches the lead against your CRM and recommends promote, link or discard, with a confidence score. You approve the ones that create new records.</p>
       <div class="pipe">
         <div class="pstep"><div class="pn">1</div><div class="pic">📝</div><h4 data-i18n="demo.s1t">Web form</h4><p data-i18n="demo.s1p">Name, email, company, message, language.</p></div>
         <div class="parrow">→</div>
-        <div class="pstep"><div class="pn">2</div><div class="pic">⚡</div><h4 data-i18n="demo.s2t">Power Automate</h4><p data-i18n="demo.s2p">Captures the lead and emails the guide (ES/EN).</p></div>
+        <div class="pstep"><div class="pn">2</div><div class="pic">⚡</div><h4 data-i18n="demo.s2t">Power Automate</h4><p data-i18n="demo.s2p">Captures the lead and sends an automatic reply.</p></div>
         <div class="parrow">→</div>
-        <div class="pstep"><div class="pn">3</div><div class="pic">🗂️</div><h4 data-i18n="demo.s3t">Lead created</h4><p data-i18n="demo.s3p">A tavu_lead lands in the buffer, tagged by source.</p></div>
+        <div class="pstep"><div class="pn">3</div><div class="pic">🗂️</div><h4 data-i18n="demo.s3t">Lead created</h4><p data-i18n="demo.s3p">The lead lands in your buffer, tagged by source.</p></div>
         <div class="parrow">→</div>
         <div class="pstep aiStep"><div class="pn">4</div><div class="pic">🤖</div><h4 data-i18n="demo.s4t">AI triage</h4><p data-i18n="demo.s4p">Matches your CRM and recommends: promote, link, or discard.</p></div>
         <div class="parrow">→</div>
@@ -291,7 +291,7 @@
         "feat.lead": "Follow one prospect, Contoso, screen by screen: a lead comes in, a meeting is captured, a proposal goes out, and a support case is handled. Here is the whole cycle, then each step inside the app.",
         "feat.bandcap": "The full sales cycle: one prospect from a raw lead to a won deal and into post-sale support, with every record in your own Microsoft tenant.",
         "feat.s1h": "1 · Lead triage",
-        "feat.s1p": "A prospect asks for the guide from a web form. Power Automate captures the lead and emails the guide, and the AI triages it before you touch anything: it matches the lead against your CRM and recommends promote, link or discard, with a confidence score. You approve the ones that create new records.",
+        "feat.s1p": "A prospect asks for information from a web form. Power Automate captures the lead and sends an automatic reply, and the AI triages it before you touch anything: it matches the lead against your CRM and recommends promote, link or discard, with a confidence score. You approve the ones that create new records.",
         "feat.s2h": "2 · Meeting capture",
         "feat.s2p": "After the discovery call, pull the Teams transcript. The AI writes the summary and extracts the discovery, flags the prospect and their company, and turns it into an opportunity in one click. It even drafts the follow-up email.",
         "feat.s3h": "3 · Proposal email",
@@ -308,8 +308,8 @@
         "demo.eyebrow": "See it in action", "demo.h2": "Watch a lead go from a web form to your pipeline.",
         "demo.lead": "A prospect asks for the guide. OpenTavu captures the lead, emails the guide, and the AI triages it before you touch anything. You only step in to approve.",
         "demo.s1t": "Web form", "demo.s1p": "Name, email, company, message, language.",
-        "demo.s2t": "Power Automate", "demo.s2p": "Captures the lead and emails the guide (ES/EN).",
-        "demo.s3t": "Lead created", "demo.s3p": "A tavu_lead lands in the buffer, tagged by source.",
+        "demo.s2t": "Power Automate", "demo.s2p": "Captures the lead and sends an automatic reply.",
+        "demo.s3t": "Lead created", "demo.s3p": "The lead lands in your buffer, tagged by source.",
         "demo.s4t": "AI triage", "demo.s4p": "Matches your CRM and recommends: promote, link, or discard.",
         "demo.s5t": "You decide", "demo.s5p": "One click. New records only after you confirm.",
         "demo.cap": "Lead Triage in the OpenTavu app: the AI recommendation, its confidence score, and your one-click decision.",
@@ -359,7 +359,7 @@
         "feat.lead": "Sigue a un prospecto, Contoso, pantalla por pantalla: entra un lead, se captura una reunión, sale una propuesta y se atiende un caso de soporte. Aquí está el ciclo completo, y luego cada paso dentro de la app.",
         "feat.bandcap": "El ciclo de venta completo: un prospecto desde un lead hasta un negocio ganado y el soporte post-venta, con cada registro en tu propio tenant de Microsoft.",
         "feat.s1h": "1 · Triage de leads",
-        "feat.s1p": "Un prospecto pide la guía desde un formulario web. Power Automate captura el lead y le envía la guía, y la IA lo triagea antes de que toques nada: lo cruza con tu CRM y recomienda promover, vincular o descartar, con un puntaje de confianza. Tú apruebas los que crean registros nuevos.",
+        "feat.s1p": "Un prospecto pide información desde un formulario web. Power Automate captura el lead y envía una respuesta automática, y la IA lo triagea antes de que toques nada: lo cruza con tu CRM y recomienda promover, vincular o descartar, con un puntaje de confianza. Tú apruebas los que crean registros nuevos.",
         "feat.s2h": "2 · Captura de reuniones",
         "feat.s2p": "Después de la llamada de descubrimiento, trae el transcript de Teams. La IA redacta el resumen y extrae el discovery, marca al prospecto y su empresa, y lo vuelve una oportunidad en un clic. Incluso redacta el correo de seguimiento.",
         "feat.s3h": "3 · Correo de propuesta",
@@ -376,8 +376,8 @@
         "demo.eyebrow": "Míralo funcionando", "demo.h2": "Un lead pasa de un formulario web a tu pipeline.",
         "demo.lead": "Un prospecto pide la guía. OpenTavu captura el lead, le envía la guía, y la IA lo triagea antes de que toques nada. Tú solo entras a aprobar.",
         "demo.s1t": "Formulario web", "demo.s1p": "Nombre, correo, empresa, mensaje, idioma.",
-        "demo.s2t": "Power Automate", "demo.s2p": "Captura el lead y envía la guía (ES/EN).",
-        "demo.s3t": "Lead creado", "demo.s3p": "Un tavu_lead entra al buffer, etiquetado por origen.",
+        "demo.s2t": "Power Automate", "demo.s2p": "Captura el lead y envía una respuesta automática.",
+        "demo.s3t": "Lead creado", "demo.s3p": "El lead entra al buffer, etiquetado por origen.",
         "demo.s4t": "Triage con IA", "demo.s4p": "Cruza tu CRM y recomienda: promover, vincular o descartar.",
         "demo.s5t": "Tú decides", "demo.s5p": "Un clic. Registros nuevos solo tras tu confirmación.",
         "demo.cap": "Lead Triage en la app de OpenTavu: la recomendación de la IA, su nivel de confianza y tu decisión en un clic.",
