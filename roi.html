@@ -88,7 +88,7 @@
         <div class="hint" data-i18n="c1hint">Los datos de tu operación actual.</div>
         <div class="field">
           <label data-i18n="lUsers">Usuarios del CRM</label>
-          <input type="number" id="users" value="10" min="1">
+          <input type="number" id="users" value="5" min="1">
         </div>
         <div class="field">
           <label data-i18n="lCurCrm">Costo actual de tu CRM <span class="lh">(por usuario/mes, 0 si usas hojas de cálculo)</span></label>
@@ -146,7 +146,7 @@
         </div>
         <div class="field">
           <label data-i18n="lImpl">Implementación <span class="lh">pago único</span></label>
-          <input type="number" id="impl" value="14400000" min="0" step="500000">
+          <input type="number" id="impl" value="7200000" min="0" step="500000">
           <div id="implHint" style="font-size:11px;color:var(--muted);margin-top:5px;line-height:1.4;"></div>
         </div>
       </div>
@@ -256,9 +256,9 @@
 
   var CURDEF = {
     usd:{loc:'en-US', sizes:[2400,4800,7200],
-         vals:{curCrm:75, rate:40, premium:20, payg:10, ai:100, support:250, impl:4800, implStep:100, rateStep:5, aiStep:25, supStep:25}},
+         vals:{curCrm:75, rate:40, premium:20, payg:10, ai:100, support:250, impl:2400, implStep:100, rateStep:5, aiStep:25, supStep:25}},
     cop:{loc:'es-CO', sizes:[7200000,14400000,21600000],
-         vals:{curCrm:300000, rate:35000, premium:80000, payg:40000, ai:400000, support:750000, impl:14400000, implStep:500000, rateStep:5000, aiStep:50000, supStep:50000}}
+         vals:{curCrm:300000, rate:35000, premium:80000, payg:40000, ai:400000, support:750000, impl:7200000, implStep:500000, rateStep:5000, aiStep:50000, supStep:50000}}
   };
 
   function money(n){ if(!isFinite(n)) return '—'; return '$'+Math.round(n).toLocaleString(CURDEF[cur].loc); }
