@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculadora de ROI · Opentavu</title>
+<title>What are lost leads costing you? · Opentavu</title>
+<meta name="description" content="Estimate with your own numbers what unanswered leads and manual CRM work cost your business every month.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://opentavu.com/roi.html">
+<meta property="og:title" content="What are lost leads costing you? · Opentavu">
+<meta property="og:description" content="Estimate with your own numbers what unanswered leads and manual CRM work cost your business every month.">
+<meta property="og:image" content="https://opentavu.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   :root{--accent:#0F6CBD;--accent2:#0A4E88;--ink:#16202b;--muted:#5a6b7b;--line:#e4e9ef;--bg:#ffffff;--soft:#f5f8fc;--good:#127a3e;}
   *{box-sizing:border-box;margin:0;padding:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;}
@@ -33,14 +40,7 @@
   .field .lh{color:var(--muted);font-weight:400;font-size:12px;}
   .field input[type=number]{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:9px;font-size:14px;background:#fff;color:var(--ink);}
   .field input:focus{outline:none;border-color:var(--accent);}
-  .check{display:flex;align-items:flex-start;gap:10px;font-size:13px;font-weight:600;cursor:pointer;}
-  .check input{margin-top:3px;width:16px;height:16px;accent-color:var(--accent);}
-  .check .lh{display:block;color:var(--muted);font-weight:400;font-size:12px;}
-  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  .price{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px;}
-  .price:last-of-type{border-bottom:0;}
-  .price b{font-size:14px;}
-  .price .lh{display:block;color:var(--muted);font-size:12px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end;}
   .res{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-radius:16px;padding:24px;flex:1;display:flex;flex-direction:column;}
   .res h2{color:#fff;font-size:16px;margin-bottom:16px;opacity:.95;}
   .kpis{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
@@ -65,7 +65,7 @@
   <div class="topbar">
     <a class="brand" href="index.html">open<b>tavu</b></a>
     <div class="topright">
-      <a class="back" href="index.html" data-i18n="back">← Inicio</a>
+      <a class="back" href="index.html" data-i18n="back">← Home</a>
       <span class="lang">
         <button data-lang="en">EN</button>
         <button data-lang="es">ES</button>
@@ -74,252 +74,179 @@
   </div>
 
   <div class="head">
-    <div class="eyebrow" data-i18n="eyebrow">Calculadora de ROI</div>
-    <h1 data-i18n="h1">¿Cuánto cuesta y cuánto te ahorra Opentavu?</h1>
-    <p class="sub" data-i18n="sub">Pon los datos de tu equipo y mira el costo real y el retorno. Los supuestos de ahorro vienen conservadores; ajústalos a tu realidad.</p>
+    <div class="eyebrow" data-i18n="eyebrow">Lost sales calculator</div>
+    <h1 data-i18n="h1">What are lost leads costing you?</h1>
+    <p class="sub" data-i18n="sub"></p>
   </div>
 
   <div class="grid">
     <div class="col">
       <div class="card">
-        <h2 data-i18n="c1h">Tu equipo hoy</h2>
-        <div class="hint" data-i18n="c1hint">Los datos de tu operación actual.</div>
+        <h2 data-i18n="c1h"></h2>
+        <div class="hint" data-i18n="c1hint"></div>
         <div class="field">
-          <label data-i18n="lUsers">Usuarios del CRM</label>
-          <input type="number" id="users" value="10" min="1">
+          <label data-i18n="l_leads"></label>
+          <input type="number" id="leads" value="30" min="0" step="5">
+        </div>
+        <div class="row2">
+        <div class="field">
+          <label data-i18n="l_unanswered"></label>
+          <input type="number" id="unanswered" value="20" min="0" max="100" step="5">
         </div>
         <div class="field">
-          <label data-i18n="lCurCrm">Lo que pagas hoy por tu CRM <span class="lh">(USD por usuario al mes, 0 si usas hojas de cálculo)</span></label>
-          <input type="number" id="curCrm" value="0" min="0" step="5">
+          <label data-i18n="l_closeRate"></label>
+          <input type="number" id="closeRate" value="15" min="0" max="100" step="1">
+        </div>
         </div>
         <div class="field">
-          <label data-i18n="lRate">Costo por hora de una persona de tu equipo <span class="lh">(USD, con prestaciones)</span></label>
+          <label data-i18n="l_ticket"></label>
+          <input type="number" id="ticket" value="2500" min="0" step="100">
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <h2 data-i18n="c2h"></h2>
+        <div class="hint" data-i18n="c2hint"></div>
+        <div class="row2">
+        <div class="field">
+          <label data-i18n="l_hours"></label>
+          <input type="number" id="hours" value="2" min="0" step="0.5">
+        </div>
+        <div class="field">
+          <label data-i18n="l_team"></label>
+          <input type="number" id="team" value="5" min="1" step="1">
+        </div>
+        </div>
+        <div class="field">
+          <label data-i18n="l_rate"></label>
           <input type="number" id="rate" value="30" min="0" step="5">
-        </div>
-        <div class="row2">
-          <div class="field">
-            <label data-i18n="lHours">Horas a la semana en tareas manuales del CRM <span class="lh">por persona</span></label>
-            <input type="number" id="hours" value="5.5" min="0" step="0.5">
-          </div>
-          <div class="field">
-            <label data-i18n="lRed">Horas que ahorra la IA (%) <span class="lh">supuesto conservador</span></label>
-            <input type="number" id="reduction" value="25" min="0" max="100" step="5">
-          </div>
-        </div>
-        <label class="check">
-          <input type="checkbox" id="agent">
-          <span><span data-i18n="lAgent">Agregar el agente de WhatsApp</span><span class="lh" data-i18n="lAgentHint">Atiende y califica a tus prospectos a cualquier hora.</span></span>
-        </label>
-      </div>
-
-      <div class="card" style="margin-top:20px;">
-        <h2 data-i18n="c2h">Precios de Opentavu</h2>
-        <div class="hint" data-i18n="c2hint">Lo que nos pagas a nosotros.</div>
-        <div class="price"><span><span data-i18n="pImpl">Implementación inicial</span><span class="lh" data-i18n="pImplHint">Pago único. No depende del número de usuarios. Incluye 30 días de acompañamiento.</span></span><b>$3,200</b></div>
-        <div class="price"><span><span data-i18n="pSup">Soporte mensual</span><span class="lh" data-i18n="pSupHint">Hasta 10 usuarios $149 · 11 a 25 $249 · 26 a 50 $399</span></span><b id="pSupV">-</b></div>
-        <div class="price"><span><span data-i18n="pAgent">Agente de WhatsApp (opcional)</span><span class="lh" data-i18n="pAgentHint">Montaje único $1,250 + operación $99 al mes, hasta 500 conversaciones</span></span><b>$1,250 + $99</b></div>
-        <div class="price"><span><span data-i18n="pExtra">Migración, integraciones y desarrollos a la medida</span><span class="lh" data-i18n="pExtraHint">Lo definimos contigo antes de empezar</span></span><b data-i18n="pExtraV">Se cotiza</b></div>
-      </div>
-
-      <div class="card" style="margin-top:20px;">
-        <h2 data-i18n="c3h">Lo que pagas a otros proveedores</h2>
-        <div class="hint" data-i18n="c3hint">Se pagan directo a cada proveedor, sin margen nuestro. Editables.</div>
-        <div class="row2">
-          <div class="field">
-            <label data-i18n="lPrem">Licencia Power Apps Premium <span class="lh">(Microsoft, USD por usuario al mes)</span></label>
-            <input type="number" id="premium" value="20" min="0" step="1">
-          </div>
-          <div class="field">
-            <label data-i18n="lAi">IA <span class="lh">(Azure, USD al mes)</span></label>
-            <input type="number" id="ai" value="10" min="0" step="5">
-          </div>
         </div>
       </div>
     </div>
 
     <div class="col">
       <div class="res">
-        <h2 data-i18n="resh">Tu costo y tu retorno con Opentavu</h2>
+        <h2 data-i18n="resh"></h2>
         <div class="kpis">
-          <div class="kpi big"><div class="l" data-i18n="kPay">Recuperas la inversión en</div><div class="v" id="payback">-</div></div>
-          <div class="kpi"><div class="l" data-i18n="kMon">Beneficio neto al mes</div><div class="v" id="monthly">-</div></div>
-          <div class="kpi"><div class="l" data-i18n="kYear">Costo total primer año</div><div class="v" id="year1">-</div></div>
+          <div class="kpi big"><div class="l" data-i18n="kYear"></div><div class="v" id="totYear">-</div></div>
+          <div class="kpi"><div class="l" data-i18n="kLost"></div><div class="v" id="lost">-</div></div>
+          <div class="kpi"><div class="l" data-i18n="kManual"></div><div class="v" id="manualCost">-</div></div>
         </div>
-        <div class="bdlabel" data-i18n="bdOneLabel">Pago único</div>
+        <div class="bdlabel" data-i18n="bdLabel"></div>
         <div class="bd">
-          <div class="li"><span data-i18n="oImpl">Implementación inicial</span><span id="oImpl">-</span></div>
-          <div class="li" id="oAgentRow"><span data-i18n="oAgent">Montaje del agente de WhatsApp</span><span id="oAgent">-</span></div>
-          <div class="li"><span data-i18n="oTot">Total pago único</span><span id="oTot">-</span></div>
-        </div>
-        <div class="bdlabel" data-i18n="bdMonLabel">Cada mes</div>
-        <div class="bd">
-          <div class="li"><span id="cSupL">-</span><span id="cSup">-</span></div>
-          <div class="li" id="cAgentRow"><span data-i18n="cAgentL">Operación del agente</span><span id="cAgent">-</span></div>
-          <div class="li"><span data-i18n="cLicL">Licencias Power Apps (Microsoft)</span><span id="cLic">-</span></div>
-          <div class="li"><span data-i18n="cAiL">IA (Azure)</span><span id="cAi">-</span></div>
-          <div class="li"><span data-i18n="cTotL">Total mensual</span><span id="cTot">-</span></div>
-        </div>
-        <div class="bdlabel" data-i18n="bdSaveLabel">Lo que recuperas cada mes</div>
-        <div class="bd">
-          <div class="li"><span data-i18n="bdPlat">CRM que dejas de pagar</span><span id="bdPlat">-</span></div>
-          <div class="li"><span data-i18n="bdProd">Horas recuperadas, en dinero</span><span id="bdProd">-</span></div>
-          <div class="li"><span data-i18n="bdNet">Beneficio neto</span><span id="bdNet">-</span></div>
+          <div class="li"><span data-i18n="bLostLeads"></span><span id="lostLeads">-</span></div>
+          <div class="li"><span data-i18n="bLostDeals"></span><span id="lostDeals">-</span></div>
+          <div class="li"><span data-i18n="bLost"></span><span id="lost2">-</span></div>
+          <div class="li"><span data-i18n="bHours"></span><span id="manualHours">-</span></div>
+          <div class="li"><span data-i18n="bManual"></span><span id="manualCost2">-</span></div>
+          <div class="li"><span data-i18n="bTotMonth"></span><span id="totMonth">-</span></div>
         </div>
         <div style="height:16px"></div>
-        <a class="cta" href="https://outlook.office365.com/book/Opentavu@opentavu.com/" target="_blank" rel="noopener" data-i18n="cta">Agenda una demo</a>
-        <p class="note" data-i18n="note">Cifras estimadas en USD. La implementación se cobra una sola vez, no depende del número de usuarios y <b>no incluye migración de datos</b>, que se cotiza aparte. El primer mes de soporte va incluido. Las licencias de Microsoft y la IA las pagas directo a Microsoft y Azure; la IA cuesta centavos por tarea y dejamos USD 10 al mes como margen. El ahorro de horas usa un supuesto conservador que puedes cambiar. Todo corre en tu propio Microsoft 365 y tus datos quedan en tu cuenta.</p>
+        <a class="cta" href="https://outlook.office365.com/book/Opentavu@opentavu.com/" target="_blank" rel="noopener" data-i18n="cta">Book a diagnosis</a>
+        <p class="note" data-i18n="note"></p>
       </div>
     </div>
   </div>
 
   <div class="foot">
     <div><b>open</b>tavu · opentavu.com</div>
-    <div id="hoursSaved"></div>
+    <div data-i18n="footnote"></div>
   </div>
 </div>
 
 <script>
   var $=function(id){return document.getElementById(id);};
-  var L='es';
-
-  // Opentavu prices (USD, same in every country). Source: GTM master, decision D13.
-  var PRICE = { impl:3200, agentSetup:1250, agentMonthly:99,
-                plans:[ {max:10, fee:149, key:'planS'}, {max:25, fee:249, key:'planM'}, {max:50, fee:399, key:'planL'} ] };
+  var L='en';
+  var WEEKS_PER_MONTH=4.33;
 
   var T = {
     en:{
-      title:"ROI Calculator · Opentavu", back:"← Home",
-      eyebrow:"ROI Calculator", h1:"What does Opentavu cost, and what does it save you?",
-      sub:"Enter your team's data to see the real cost and the return. The savings assumptions start conservative; adjust them to your reality.",
-      c1h:"Your team today", c1hint:"Your current operation.",
-      lUsers:"CRM users",
-      lCurCrm:'What you pay for your CRM today <span class="lh">(USD per user per month, 0 if you use spreadsheets)</span>',
-      lRate:'Hourly cost of a team member <span class="lh">(USD, fully loaded)</span>',
-      lHours:'Hours per week on manual CRM work <span class="lh">per person</span>',
-      lRed:'Hours AI saves (%) <span class="lh">conservative assumption</span>',
-      lAgent:"Add the WhatsApp agent", lAgentHint:"Answers and qualifies your prospects at any hour.",
-      c2h:"Opentavu prices", c2hint:"What you pay us.",
-      pImpl:"Initial implementation", pImplHint:"One-time. Does not depend on the number of users. Includes 30 days of follow-up support.",
-      pSup:"Monthly support", pSupHint:"Up to 10 users $149 · 11 to 25 $249 · 26 to 50 $399",
-      pAgent:"WhatsApp agent (optional)", pAgentHint:"One-time setup $1,250 + operation $99 per month, up to 500 conversations",
-      pExtra:"Migration, integrations and custom work", pExtraHint:"We scope it with you before starting", pExtraV:"Quoted",
-      c3h:"What you pay other providers", c3hint:"Paid directly to each provider, with no margin for us. Editable.",
-      lPrem:'Power Apps Premium license <span class="lh">(Microsoft, USD per user per month)</span>',
-      lAi:'AI <span class="lh">(Azure, USD per month)</span>',
-      resh:"Your cost and your return with Opentavu",
-      kPay:"You recover the investment in", kMon:"Net benefit per month", kYear:"Total first-year cost",
-      bdOneLabel:"One-time", oImpl:"Initial implementation", oAgent:"WhatsApp agent setup", oTot:"Total one-time",
-      bdMonLabel:"Every month", cAgentL:"Agent operation", cLicL:"Power Apps licenses (Microsoft)", cAiL:"AI (Azure)", cTotL:"Monthly total",
-      bdSaveLabel:"What you recover every month", bdPlat:"CRM you stop paying for", bdProd:"Hours recovered, in money", bdNet:"Net benefit",
-      planS:"Support, Essential plan", planM:"Support, Team plan", planL:"Support, Business plan", planX:"Support, over 50 users: quoted (from)",
-      cta:"Book a demo",
-      note:'Estimates in USD. Implementation is charged once, does not depend on the number of users and <b>does not include data migration</b>, quoted separately. The first month of support is included. Microsoft licenses and AI are paid directly to Microsoft and Azure; AI costs cents per task and we leave USD 10 per month as a margin. Hours saved use a conservative assumption you can change. Everything runs in your own Microsoft 365 and your data stays in your account.',
-      payNA:"N/A", payLt1:"< 1 month", payMonths:"months", hoursSaved:"hours per week recovered across your team"
+      title:"What are lost leads costing you? · Opentavu", back:"← Home",
+      eyebrow:"Lost sales calculator", h1:"What are lost leads costing you?",
+      sub:"Put in your own numbers and see what slow replies and manual work cost you every month. The defaults are conservative; change any of them.",
+      c1h:"Your leads", c1hint:"How many come in and what happens to them.",
+      l_leads:'Leads per month <span class="lh">(inquiries from every channel)</span>',
+      l_unanswered:'Leads without a reply in 24 h (%) <span class="lh">assumption</span>',
+      l_closeRate:'Your usual close rate (%) <span class="lh">of leads that get answered</span>',
+      l_ticket:'Average ticket <span class="lh">(USD per closed sale)</span>',
+      c2h:"Your team's manual work", c2hint:"Time spent typing into the CRM or spreadsheets instead of selling.",
+      l_hours:'Hours per week on manual entry <span class="lh">per person</span>',
+      l_team:'Team size <span class="lh">(people)</span>',
+      l_rate:'Loaded hourly cost <span class="lh">(USD per hour, with benefits)</span>',
+      resh:"What it costs you today",
+      kYear:"Total per year", kLost:"Lost sales per month", kManual:"Manual work per month",
+      bdLabel:"How we got there, every month",
+      bLostLeads:"Leads without a timely reply", bLostDeals:"Sales those leads would have closed", bLost:"Lost sales",
+      bHours:"Hours of manual entry", bManual:"Cost of those hours", bTotMonth:"Total per month",
+      cta:"Book a diagnosis",
+      note:"This is an estimate with your own numbers. The diagnosis replaces it with real ones.",
+      footnote:"Assumes an unanswered lead would have closed at your usual rate. Figures in USD.",
+      hoursUnit:"h"
     },
     es:{
-      title:"Calculadora de ROI · Opentavu", back:"← Inicio",
-      eyebrow:"Calculadora de ROI", h1:"¿Cuánto cuesta y cuánto te ahorra Opentavu?",
-      sub:"Pon los datos de tu equipo y mira el costo real y el retorno. Los supuestos de ahorro vienen conservadores; ajústalos a tu realidad.",
-      c1h:"Tu equipo hoy", c1hint:"Los datos de tu operación actual.",
-      lUsers:"Usuarios del CRM",
-      lCurCrm:'Lo que pagas hoy por tu CRM <span class="lh">(USD por usuario al mes, 0 si usas hojas de cálculo)</span>',
-      lRate:'Costo por hora de una persona de tu equipo <span class="lh">(USD, con prestaciones)</span>',
-      lHours:'Horas a la semana en tareas manuales del CRM <span class="lh">por persona</span>',
-      lRed:'Horas que ahorra la IA (%) <span class="lh">supuesto conservador</span>',
-      lAgent:"Agregar el agente de WhatsApp", lAgentHint:"Atiende y califica a tus prospectos a cualquier hora.",
-      c2h:"Precios de Opentavu", c2hint:"Lo que nos pagas a nosotros.",
-      pImpl:"Implementación inicial", pImplHint:"Pago único. No depende del número de usuarios. Incluye 30 días de acompañamiento.",
-      pSup:"Soporte mensual", pSupHint:"Hasta 10 usuarios $149 · 11 a 25 $249 · 26 a 50 $399",
-      pAgent:"Agente de WhatsApp (opcional)", pAgentHint:"Montaje único $1,250 + operación $99 al mes, hasta 500 conversaciones",
-      pExtra:"Migración, integraciones y desarrollos a la medida", pExtraHint:"Lo definimos contigo antes de empezar", pExtraV:"Se cotiza",
-      c3h:"Lo que pagas a otros proveedores", c3hint:"Se pagan directo a cada proveedor, sin margen nuestro. Editables.",
-      lPrem:'Licencia Power Apps Premium <span class="lh">(Microsoft, USD por usuario al mes)</span>',
-      lAi:'IA <span class="lh">(Azure, USD al mes)</span>',
-      resh:"Tu costo y tu retorno con Opentavu",
-      kPay:"Recuperas la inversión en", kMon:"Beneficio neto al mes", kYear:"Costo total primer año",
-      bdOneLabel:"Pago único", oImpl:"Implementación inicial", oAgent:"Montaje del agente de WhatsApp", oTot:"Total pago único",
-      bdMonLabel:"Cada mes", cAgentL:"Operación del agente", cLicL:"Licencias Power Apps (Microsoft)", cAiL:"IA (Azure)", cTotL:"Total mensual",
-      bdSaveLabel:"Lo que recuperas cada mes", bdPlat:"CRM que dejas de pagar", bdProd:"Horas recuperadas, en dinero", bdNet:"Beneficio neto",
-      planS:"Soporte, plan Esencial", planM:"Soporte, plan Equipo", planL:"Soporte, plan Empresa", planX:"Soporte, más de 50 usuarios: cotizamos (desde)",
-      cta:"Agenda una demo",
-      note:'Cifras estimadas en USD. La implementación se cobra una sola vez, no depende del número de usuarios y <b>no incluye migración de datos</b>, que se cotiza aparte. El primer mes de soporte va incluido. Las licencias de Microsoft y la IA las pagas directo a Microsoft y Azure; la IA cuesta centavos por tarea y dejamos USD 10 al mes como margen. El ahorro de horas usa un supuesto conservador que puedes cambiar. Todo corre en tu propio Microsoft 365 y tus datos quedan en tu cuenta.',
-      payNA:"No aplica", payLt1:"< 1 mes", payMonths:"meses", hoursSaved:"horas a la semana recuperadas en tu equipo"
+      title:"¿Cuánto te cuestan los leads que se pierden? · Opentavu", back:"← Inicio",
+      eyebrow:"Calculadora de ventas perdidas", h1:"¿Cuánto te cuestan los leads que se pierden?",
+      sub:"Pon tus propios números y mira cuánto te cuestan cada mes las respuestas lentas y el trabajo manual. Los valores iniciales son conservadores; cambia el que quieras.",
+      c1h:"Tus leads", c1hint:"Cuántos entran y qué pasa con ellos.",
+      l_leads:'Leads por mes <span class="lh">(consultas de todos los canales)</span>',
+      l_unanswered:'Leads sin respuesta en 24 h (%) <span class="lh">supuesto</span>',
+      l_closeRate:'Tu tasa de cierre habitual (%) <span class="lh">de los leads que sí se atienden</span>',
+      l_ticket:'Ticket promedio <span class="lh">(USD por venta cerrada)</span>',
+      c2h:"El trabajo manual de tu equipo", c2hint:"Tiempo escribiendo en el CRM o en hojas de cálculo en lugar de vender.",
+      l_hours:'Horas a la semana en registro manual <span class="lh">por persona</span>',
+      l_team:'Tamaño del equipo <span class="lh">(personas)</span>',
+      l_rate:'Costo por hora con prestaciones <span class="lh">(USD por hora)</span>',
+      resh:"Lo que te cuesta hoy",
+      kYear:"Total al año", kLost:"Ventas que se escapan al mes", kManual:"Trabajo manual al mes",
+      bdLabel:"Cómo llegamos a la cifra, cada mes",
+      bLostLeads:"Leads sin respuesta a tiempo", bLostDeals:"Ventas que esos leads habrían cerrado", bLost:"Ventas que se escapan",
+      bHours:"Horas de registro manual", bManual:"Costo de esas horas", bTotMonth:"Total al mes",
+      cta:"Agenda un diagnóstico",
+      note:"Es una estimación con tus números. El diagnóstico la cambia por números reales.",
+      footnote:"Supone que un lead sin respuesta habría cerrado a tu tasa habitual. Cifras en USD.",
+      hoursUnit:"h"
     }
   };
 
-  function money(n){ if(!isFinite(n)) return '-'; return (n<0?'-$':'$')+Math.round(Math.abs(n)).toLocaleString('en-US'); }
+  function money(n){ if(!isFinite(n)) return '-'; return '$'+Math.round(n).toLocaleString('en-US'); }
+  function dec(n){ var s=(Math.round(n*10)/10).toString(); return L==='es'?s.replace('.',','):s; }
+  function num(id){ var v=parseFloat($(id).value); return isNaN(v)||v<0?0:v; }
+  function pct(id){ return Math.min(100,num(id))/100; }
 
-  function supportPlan(users){
-    for(var i=0;i<PRICE.plans.length;i++){ if(users<=PRICE.plans[i].max) return PRICE.plans[i]; }
-    return {max:Infinity, fee:PRICE.plans[PRICE.plans.length-1].fee, key:'planX'};
+  function calc(){
+    var t=T[L];
+    var lostLeads=num('leads')*pct('unanswered');
+    var lostDeals=lostLeads*pct('closeRate');
+    var lost=lostDeals*num('ticket');
+    var hoursMonth=num('hours')*num('team')*WEEKS_PER_MONTH;
+    var manual=hoursMonth*num('rate');
+    var month=lost+manual;
+    $('lostLeads').textContent=dec(lostLeads);
+    $('lostDeals').textContent=dec(lostDeals);
+    $('lost').textContent=money(lost); $('lost2').textContent=money(lost);
+    $('manualHours').textContent=Math.round(hoursMonth)+' '+t.hoursUnit;
+    $('manualCost').textContent=money(manual); $('manualCost2').textContent=money(manual);
+    $('totMonth').textContent=money(month);
+    $('totYear').textContent=money(month*12);
   }
 
   function setLang(lang){
-    L=lang; var t=T[lang];
-    document.documentElement.lang=lang; document.title=t.title;
+    L=(lang==='es')?'es':'en'; var t=T[L];
+    document.documentElement.lang=L; document.title=t.title;
     document.querySelectorAll('[data-i18n]').forEach(function(el){
       var k=el.getAttribute('data-i18n'); if(t[k]!==undefined) el.innerHTML=t[k];
     });
-    document.querySelectorAll('.lang button').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-lang')===lang); });
-    try{ localStorage.setItem('otlang', lang); }catch(e){}
+    document.querySelectorAll('.lang button').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-lang')===L); });
+    try{ localStorage.setItem('otlang', L); }catch(e){}
     calc();
   }
 
-  function num(id){ var v=parseFloat($(id).value); return isNaN(v)?0:v; }
-
-  function calc(){
-    var users=Math.max(1, Math.round(num('users'))), curCrm=num('curCrm'), rate=num('rate'),
-        hours=num('hours'), reduction=num('reduction')/100,
-        premium=num('premium'), ai=num('ai'), hasAgent=$('agent').checked;
-    var WPM=4.33, t=T[L];
-
-    var plan = supportPlan(users);
-    var oneTime = PRICE.impl + (hasAgent ? PRICE.agentSetup : 0);
-    var agentMonthly = hasAgent ? PRICE.agentMonthly : 0;
-    var licenseCost = users*premium;
-    var monthly = plan.fee + agentMonthly + licenseCost + ai;
-
-    var platSaving = users*curCrm;
-    var hoursSavedWeek = users*hours*reduction;
-    var prodSaving = hoursSavedWeek*WPM*rate;
-    var netMonthly = platSaving + prodSaving - monthly;
-    var payback = netMonthly>0 ? oneTime/netMonthly : Infinity;
-    // First month of support is included with the implementation.
-    var year1 = oneTime + plan.fee*11 + (agentMonthly + licenseCost + ai)*12;
-
-    var pbTxt;
-    if(netMonthly<=0){ pbTxt=t.payNA; }
-    else if(payback<1){ pbTxt=t.payLt1; }
-    else { var pb=payback.toFixed(1); if(L==='es') pb=pb.replace('.',','); pbTxt=pb+' '+t.payMonths; }
-
-    $('payback').textContent = pbTxt;
-    $('monthly').textContent = money(netMonthly);
-    $('year1').textContent = money(year1);
-    $('pSupV').textContent = money(plan.fee);
-    $('oImpl').textContent = money(PRICE.impl);
-    $('oAgentRow').style.display = hasAgent ? 'flex' : 'none';
-    $('oAgent').textContent = money(PRICE.agentSetup);
-    $('oTot').textContent = money(oneTime);
-    $('cSupL').textContent = t[plan.key];
-    $('cSup').textContent = money(plan.fee);
-    $('cAgentRow').style.display = hasAgent ? 'flex' : 'none';
-    $('cAgent').textContent = money(agentMonthly);
-    $('cLic').textContent = money(licenseCost);
-    $('cAi').textContent = money(ai);
-    $('cTot').textContent = money(monthly);
-    $('bdPlat').textContent = money(platSaving);
-    $('bdProd').textContent = money(prodSaving);
-    $('bdNet').textContent = money(netMonthly);
-    $('hoursSaved').textContent = Math.round(hoursSavedWeek)+' '+t.hoursSaved;
-  }
-
-  // wiring
   document.querySelectorAll('input').forEach(function(i){ i.addEventListener('input',calc); i.addEventListener('change',calc); });
   document.querySelectorAll('.lang button').forEach(function(b){
     b.addEventListener('click',function(){ setLang(b.getAttribute('data-lang')); });
   });
 
-  // init: respect language chosen on the main site
+  // init: respect the language chosen on the main site
   var saved=''; try{ saved=localStorage.getItem('otlang')||''; }catch(e){}
   var lang0 = (saved==='en'||saved==='es') ? saved : ((navigator.language||'en').toLowerCase().indexOf('es')===0?'es':'en');
   setLang(lang0);

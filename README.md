@@ -1,4 +1,4 @@
-# OpenTavu — marketing site
+# OpenTavu: marketing site
 
 Static single-page landing for **https://opentavu.com**. One file, no build step, no
 dependencies (fast, free to host).
@@ -10,13 +10,13 @@ dependencies (fast, free to host).
 3. Custom domain: `opentavu.com` (the `CNAME` file already sets it). Tick **Enforce HTTPS**.
 4. Point DNS (see below), then wait a few minutes for the certificate.
 
-## DNS (edit in Hostinger's DNS panel for opentavu.com — it's currently parked)
+## DNS (edit in Hostinger's DNS panel for opentavu.com: it's currently parked)
 
 - Apex `opentavu.com` → **A** records to GitHub Pages:
   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 - `www` → **CNAME** → `opentavu.github.io`
 
-GitHub shows the exact records to use in **Settings → Pages** after you add the domain —
+GitHub shows the exact records to use in **Settings → Pages** after you add the domain;
 confirm there in case the IPs change.
 
 ## Edit
