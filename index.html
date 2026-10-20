@@ -40,18 +40,24 @@
     .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
     .brand { font-size: 22px; font-weight: 800; letter-spacing: -.5px; color: var(--ink); }
     .brand b { color: var(--accent); }
-    .nav-links { display: flex; gap: 22px; align-items: center; font-size: 15px; }
-    .nav-links a { color: var(--muted); font-weight: 500; }
+    header .wrap { max-width: 1280px; }
+    .brand { flex-shrink: 0; margin-right: 24px; }
+    .nav-links .lang { flex-shrink: 0; }
+    .nav-links { display: flex; gap: 20px; align-items: center; font-size: 15px; }
+    .nav-links a { color: var(--muted); font-weight: 500; white-space: nowrap; }
     .nav-links a:hover { color: var(--ink); }
     .nav-links a.btn-primary { color: #fff; }
     .nav-links a.btn-primary:hover { color: #fff; }
     .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
     .lang button { border: 0; background: #fff; color: var(--muted); font-size: 13px; font-weight: 700; padding: 6px 10px; cursor: pointer; }
     .lang button.active { background: var(--accent); color: #fff; }
-    @media (max-width: 760px) { .nav-links .hide-sm { display: none; } }
+    @media (max-width: 1240px) { .nav-links { gap: 16px; font-size: 14px; } }
+    @media (max-width: 1120px) { .nav-links .hide-md { display: none; } }
+    @media (max-width: 760px) { .nav-links .hide-sm { display: none; } .brand { margin-right: 12px; } .nav-links { gap: 12px; } }
+    @media (max-width: 480px) { .nav-links a.btn { white-space: normal; text-align: center; line-height: 1.25; max-width: 128px; padding: 7px 10px !important; font-size: 13px !important; } }
 
     .hero { padding: 84px 0 72px; background: radial-gradient(1200px 500px at 70% -10%, rgba(15,108,189,.10), transparent 60%); }
-    .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; letter-spacing: -1px; max-width: 880px; }
+    .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; letter-spacing: -1px; max-width: 940px; text-wrap: balance; }
     .hero h1 span { color: var(--accent); }
     .hero p.sub { font-size: clamp(17px, 2.2vw, 21px); color: var(--muted); max-width: 900px; margin-top: 22px; }
     .hero .cta { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
@@ -60,7 +66,7 @@
     section { padding: 72px 0; }
     section.soft { background: var(--bg-soft); }
     .eyebrow { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; }
-    h2 { font-size: clamp(26px, 3.5vw, 36px); letter-spacing: -.5px; margin-top: 10px; max-width: 940px; }
+    h2 { font-size: clamp(26px, 3.5vw, 36px); line-height: 1.2; letter-spacing: -.5px; margin-top: 10px; max-width: 940px; text-wrap: balance; }
     .lead { color: var(--muted); font-size: 18px; margin-top: 14px; max-width: 940px; }
     h3.stage { font-size: clamp(22px, 3vw, 28px); letter-spacing: -.3px; margin-top: 54px; }
     h3.stage + .lead { margin-top: 8px; }
@@ -119,8 +125,8 @@
       <div class="brand">open<b>tavu</b></div>
       <nav class="nav-links">
         <a href="#problem" class="hide-sm" data-i18n="nav.problem">Where sales get lost</a>
-        <a href="#model" class="hide-sm" data-i18n="nav.model">How we work</a>
-        <a href="#what" class="hide-sm" data-i18n="nav.what">What we use</a>
+        <a href="#model" class="hide-sm hide-md" data-i18n="nav.model">How we work</a>
+        <a href="#what" class="hide-sm hide-md" data-i18n="nav.what">What we use</a>
         <a href="roi.html" class="hide-sm" data-i18n="nav.roi">Lost sales calculator</a>
         <span class="lang">
           <button data-lang="en">EN</button>
